@@ -41,10 +41,10 @@
 				// | SHIFT   |  Z   |  X   | COPY  | PASTE |  B    |  N   |  1    |  2   | 3   |   /   |  Mo5  |
 				// | LCTRL   |  FN  | LALT | LGUI  | LOWR  | TAB   |  RET |  RAIS |  0   | -   |   =   |  Mo4  |
 			bindings = <
-				&kp GRAVE  &kp N1           &kp N2  &kp N3      &kp N4       &kp N5   &kp N6  &kp N7   &kp N8    &kp N9    &kp N0    &trans
-				&trans     &trans           &trans  &trans      &trans       &trans   &trans  &trans   &trans    &trans    &trans    &trans
-				&trans     &trans           &trans  &kp K_COPY  &kp K_PASTE  &trans   &trans  &trans   &trans    &trans    &trans    &trans
-				&trans     &mo    &trans  &trans      &trans       &kp TAB  &trans  &trans   &kp C_PP  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
+				&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4    &kp N5   &kp N6  &kp N7   &kp N8    &kp N9    &kp N0    &trans
+				&trans     &trans  &trans  &trans   &trans    &trans   &trans  &trans   &trans    &trans    &trans    &trans
+				&trans     &trans  &trans  &trans   &trans    &trans   &trans  &trans   &trans    &trans    &trans    &trans
+				&trans     &trans  &trans  &trans   &trans    &kp TAB  &trans  &trans   &kp C_PP  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
 			>;
 
 			// sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -68,7 +68,7 @@
 			bindings = <
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+				&trans &trans &trans &kp K_COPY &kp K_PASTE &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &mo 4
 			>;
 		};
