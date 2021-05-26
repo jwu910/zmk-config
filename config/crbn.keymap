@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define NONE 0
 #define LOWER 1
 #define UPPER 2
 #define SOME_THING 4
@@ -43,8 +44,8 @@
 			bindings = <
 				&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4    &kp N5   &kp N6  &kp N7   &kp N8    &kp N9    &kp N0    &trans
 				&trans     &trans  &trans  &trans   &trans    &trans   &trans  &kp N4   &kp N5    &kp N6    &kp N7    &trans
-				&trans     &trans  &trans  &trans   &trans    &trans   &trans  &trans   &kp N1    &kp N2    &kp N3    &trans
-				&trans     &trans  &trans  &trans   &trans    &kp TAB  &trans  &trans   &trans    &kp N0    &trans    &trans
+				&trans     &trans  &trans  &trans   &trans    &trans   &trans  &kp N1   &kp N2    &kp N3    &trans    &trans
+				&trans     &trans  &trans  &trans   &trans    &kp TAB  &trans  &trans   &kp N0    &trans    &trans    &trans
 			>;
 
 			// sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
