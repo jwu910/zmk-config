@@ -11,7 +11,7 @@
 #define NONE 0
 #define LOWER 1
 #define RAISE 2
-#define SOME_THING 4
+#define SOME_THING 4 // need to update this layer what should this be called??
 #define MEDIA 5
 #define FUNC_LAYER 6
 
@@ -42,10 +42,10 @@
 				// | SHIFT   |  Z   |  X   | COPY  | PASTE |  B    |  N   |  1    |  2   | 3   |   /   |  Mo5  |
 				// | LCTRL   |  FN  | LALT | LGUI  | LOWR  | TAB   |  RET |  RAIS |  0   | -   |   =   |  Mo4  |
 			bindings = <
-				&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4    &kp N5   &kp N6  &kp N7   &kp N8    &kp N9    &kp N0    &trans
-				&trans     &trans  &trans  &trans   &trans    &trans   &trans  &kp N4   &kp N5    &kp N6    &kp N7    &trans
-				&trans     &trans  &trans  &trans   &trans    &trans   &trans  &kp N1   &kp N2    &kp N3    &trans    &trans
-				&trans     &trans  &trans  &trans   &trans    &kp TAB  &trans  &trans   &kp N0    &trans    &trans    &trans
+				&kp GRAVE  &kp N1  &kp N2  &kp N3     &kp N4      &kp N5   &kp N6  &kp N7   &kp N8    &kp N9    &kp N0    &trans
+				&trans     &trans  &trans  &trans     &trans      &trans   &trans  &kp N4   &kp N5    &kp N6    &kp N7    &trans
+				&trans     &trans  &trans  &kp K_COPY &kp K_PASTE &trans   &trans  &kp N1   &kp N2    &kp N3    &trans    &trans
+				&trans     &trans  &trans  &trans     &trans      &kp TAB  &trans  &trans   &kp N0    &trans    &trans    &trans
 			>;
 
 			// sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -58,10 +58,10 @@
 				// | SHIFT     |  Z   |  X   |  [   |  ]   |  B    |   N   |  M    |  ,   |  .   |   /   |  Mo5  |
 				// | LCTRL     |  FN  | LALT | LGUI | LOWR | SPACE |  RET  |  RAIS | Mo3  |  -   |   =   |  Mo4  |
 			bindings = <
-				&kp LS(GRAVE) &trans &trans &trans &trans &trans &trans &trans &trans     &trans       &trans &trans
-				&trans        &trans &trans &trans &trans &trans &trans &trans &trans     &trans       &trans &trans
-				&trans        &trans &trans &trans &trans &trans &trans &trans &trans     &trans       &trans &trans
-				&trans        &trans &trans &trans &mo 3  &trans &trans &trans &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
+				&kp LS(GRAVE) &trans &trans &kp LBRC &kp RBRC &trans &trans &trans &trans     &trans       &trans &trans
+				&trans        &trans &trans &kp LPAR &kp RPAR &trans &trans &trans &trans     &trans       &trans &trans
+				&trans        &trans &trans &kp LBKT &kp RBKT &trans &trans &trans &trans     &trans       &trans &trans
+				&trans        &trans &trans &trans   &mo 3    &trans &trans &trans &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
 			>;
 		};
 
