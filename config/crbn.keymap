@@ -37,10 +37,10 @@
 
 		lower {
 				// -----------------------------------------------------------------------------------------
-				// |     |  1   |  2   |  3    |  4    |  5    |  6   |  7    |  8  | 9     |   0   |    |
-				// | DEL |      |      |       |       |       | LEFT | DOWN  | UP  | RIGHT |       |    |
-				// |     |      |      | COPY  | PASTE |       |      |       |     |       |       |    |
-				// |     |      |      |       |       |       |      |       |     |       |       |    |
+				// |     |  1   |  2   |  3    |  4    |  5    |  6   |  7    |  8  | 9     |   0   |      |
+				// | DEL |      |      |       |       |       | LEFT | DOWN  | UP  | RIGHT |       |      |
+				// |     |      |      | COPY  | PASTE |       |      |       |     |       |       |      |
+				// |     |      |      |       |       |       |      |       |     |       |       |      |
 			bindings = <
 				&kp GRAVE  &kp N1  &kp N2  &kp N3     &kp N4      &kp N5   &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &trans
 				&kp DEL    &trans  &trans  &trans     &trans      &trans   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans    &trans
@@ -53,15 +53,15 @@
 
 		raise {
 				// -----------------------------------------------------------------------------------------
-				// | LS(GRAVE) |    |    |  {   |  }   |     |     |     |       |        |          |      |      
-				// |           |    |    |  (   |  )   |     |     |     |       |        |          |      |
-				// |           |    |    |  [   |  ]   |     |     |     |       |        |          |      |
-				// |           |    |    |      |      | TAB |     |     | Next  | VOL_UP | VOL_DOWN | PLAY |
+				// | LS(GRAVE) |    |    |  {   |  }   |     |      |       |       |        |          |      |      
+				// |           |    |    |  (   |  )   |     | LEFT | DOWN  | UP    | RIGHT  |          |      |
+				// |           |    |    |  [   |  ]   |     |      |       |       |        |          |      |
+				// |           |    |    |      |      | TAB |      |       | Next  | VOL_UP | VOL_DOWN | PLAY |
 			bindings = <
-				&kp LS(GRAVE) &trans &trans &kp LBRC &kp RBRC &trans  &trans  &trans &trans     &trans       &trans       &trans
-				&trans        &trans &trans &kp LPAR &kp RPAR &trans  &trans  &trans &trans     &trans       &trans       &trans
-				&trans        &trans &trans &kp LBKT &kp RBKT &trans  &trans  &trans &trans     &trans       &trans       &trans
-				&trans        &trans &trans &trans   &mo 3    &kp TAB &trans  &trans &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
+				&kp LS(GRAVE) &trans &trans &kp LBRC &kp RBRC &trans  &trans    &trans    &trans      &trans       &trans       &trans
+				&trans        &trans &trans &kp LPAR &kp RPAR &trans  &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT    &trans       &trans
+				&trans        &trans &trans &kp LBKT &kp RBKT &trans  &trans    &trans    &trans      &trans       &trans       &trans
+				&trans        &trans &trans &trans   &mo 3    &kp TAB &trans    &trans    &kp C_NEXT  &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
 			>;
 		};
 
