@@ -21,27 +21,30 @@
 
 		default_layer {
 				// -----------------------------------------------------------------------------------------
-				// |  ESC    |  Q   |  W   |  E   |  R   |  T    |   Y   |  U    |  I   |  O   |   P   |  \    |
+				// |  ESC    |  1   |  2   |  3   |  4   |  5    |   6   |  7    |  8   |  9   |   0   |       |
+				// |	`    |  Q   |  W   |  E   |  R   |  T    |   Y   |  U    |  I   |  O   |   P   |  \    |
 				// |  BSPC   |  A   |  S   |  D   |  F   |  G    |   H   |  J    |  K   |  L   |   ;   |  '    |
 				// | SHIFT   |  Z   |  X   |  C   |  V   |  B    |   N   |  M    |  ,   |  .   |   /   |  Mo5  |
-				// | LCTRL   |  FN  | LALT | LGUI | LOWR | SPACE |  RET  |  RAIS | Mo3  |  -   |   =   |  Mo4  |
+				// | LCTRL   |  FN  | LALT | LGUI | RAIS |	TAB  | SPACE |  RET  |  LOWR | Mo3  |      |   -   |   =   |  Mo4  |
 			bindings = <
-				&kp ESC    &kp Q     &kp W    &kp E    &kp R     &kp T     &kp Y     &kp U      &kp I     &kp O     &kp P     &kp BSLH
+				&kp ESC		&kp 1	&kp 2	&kp 3	&kp	4	&kp	5	&kp 6	&kp 7	&kp8	&kp 9	&kp 0	&trans
+				&kp GRAVE  &kp Q     &kp W    &kp E    &kp R     &kp T     &kp Y     &kp U      &kp I     &kp O     &kp P     &kp BSLH
 				&kp BSPC   &kp A     &kp S    &kp D    &kp F     &kp G     &kp H     &kp J      &kp K     &kp L     &kp SEMI  &kp SQT
-				&kp LSHFT  &kp Z     &kp X    &kp C    &kp V     &kp B     &kp N     &kp M      &kp COMMA &kp DOT   &kp FSLH  &mo 5
-				&kp LCTRL  &mo 5     &kp LALT &kp LGUI &mo LOWER &kp SPACE &kp RET   &mo RAISE  &trans     &kp MINUS &kp EQUAL &mo 4
+				&kp LSHFT  &kp Z     &kp X    &kp C    &kp V     &kp B     &kp N     &kp M      &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
+				&kp LCTRL  &mo 5     &kp LALT &kp LGUI &mo RAISE &kp TAB	&kp SPACE	 &kp RET	&mo LOWER	&trans	&kp MINUS	&kp EQUAL	&mo 4
 			>;
 
 			// sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
 		};
 
-		lower {
+		raise {
 				// -----------------------------------------------------------------------------------------
 				// |     |  1   |  2   |  3    |  4    |  5    |  6   |  7    |  8  | 9     |   0   |      |
 				// | DEL |      |      |       |       |       | LEFT | DOWN  | UP  | RIGHT |       |      |
 				// |     |      |      | COPY  | PASTE |       |      |       |     |       |       |      |
 				// |     |      |      |       |       |       |      |       |     |       |       |      |
 			bindings = <
+				&trans     &trans  &trans  &trans     &trans      &trans   &trans    &trans    &trans    &trans     &trans    &trans
 				&kp GRAVE  &kp N1  &kp N2  &kp N3     &kp N4      &kp N5   &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &trans
 				&kp DEL    &trans  &trans  &trans     &trans      &trans   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans    &trans
 				&trans     &trans  &trans  &kp LG(C)  &kp LG(V)   &trans   &trans    &trans    &trans    &trans     &trans    &trans
@@ -51,17 +54,19 @@
 			// sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 
-		raise {
+		lower {
 				// -----------------------------------------------------------------------------------------
-				// | LS(GRAVE) |    |    |  {   |  }   |     |      |       |       |        |          |      |      
-				// |           |    |    |  (   |  )   |     | LEFT | DOWN  | UP    | RIGHT  |          |      |
-				// |           |    |    |  [   |  ]   |     |      |       |       |        |          |      |
-				// |           |    |    |      |      | TAB |      |       | Next  | VOL_UP | VOL_DOWN | PLAY |
+				// |    |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9   |  F10  |  F11  |
+				// |	|	   |      |  {   |  }   |		|	  |		 |	  |		   |	    | F12  |
+				// |    |    |    |  (   |  )   |     | LEFT | DOWN  | UP    | RIGHT  |          |      |
+				// |    |    |    |  [   |  ]   |     |      |       |       |        |          |      |
+				// |    |    |    |      |      |	  |      |       | Next  | VOL_UP | VOL_DOWN | PLAY |
 			bindings = <
-				&kp LS(GRAVE) &trans &trans &kp LBRC &kp RBRC &trans  &trans    &trans    &trans      &trans       &trans       &trans
-				&trans        &trans &trans &kp LPAR &kp RPAR &trans  &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT    &trans       &trans
-				&trans        &trans &trans &kp LBKT &kp RBKT &trans  &trans    &trans    &trans      &trans       &trans       &trans
-				&trans        &trans &trans &trans   &mo 3    &kp TAB &trans    &trans    &kp C_NEXT  &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
+				&trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+				&trans	&trans	&trans	&kp LBRC &kp RBRC &trans  &trans    &trans    &trans      &trans       &trans       &kp f12
+				&trans	&trans	&trans	&kp LPAR &kp RPAR &trans  &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT    &trans       &trans
+				&trans  &trans	&trans	&kp LBKT &kp RBKT &trans  &trans    &trans    &kp C_PREV      &kp C_NEXT      &trans       &trans
+				&trans  &trans	&trans	&trans   &mo 3  &trans  &trans  &trans  &trans    &trans    &trans  &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
 			>;
 		};
 
@@ -71,7 +76,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans &trans &kp K_COPY &kp K_PASTE &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &mo 4
-			>;
+				>;
 		};
 
 		SOME_THING {
@@ -86,7 +91,8 @@
 		function_layer {
 				// -----------------------------------------------------------------------------------------
 				// |      |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9   |  F10  |  F11  |
-				// |      |      |      |      |      |      | LEFT | DOWN |  UP  | RIGHT |       |  F12  |
+				// |      |      |      |      |      |      |      |      |      |       |       |   F12 |
+				// |      |      |      |      |      |      | LEFT | DOWN |  UP  | RIGHT |       |       |
 				// |      |      |      |      |      |      |      |      |      |       |       |       |
 				// |      |      |      |      |      |      |      |      |      |       |       |       |
 			bindings = <
