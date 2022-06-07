@@ -53,10 +53,10 @@
 
 		raise {
 				// -----------------------------------------------------------------------------------------
-				// | LS(GRAVE) |    |    |  {   |  }   |     |      |       |       |        |          |      |
-				// |           |    |    |  (   |  )   |     | LEFT | DOWN  | UP    | RIGHT  |          |      |
-				// |           |    |    |  [   |  ]   |     |      |       |       |        |          |      |
-				// |           |    |    |      |      | TAB |      |       | Next  | VOL_UP | VOL_DOWN | PLAY |
+				// | LS(GRAVE) |    |    |  {   |  }   |     |      |       |       |          |        |      |
+				// |           |    |    |  (   |  )   |     | LEFT | DOWN  | UP    |  RIGHT   |        |      |
+				// |           |    |    |  [   |  ]   |     |      |       | PREV  |  Next    |        |      |
+				// |           |    |    |      |      | TAB |      |       |       | VOL_DOWN | VOL_UP | PLAY |
 			bindings = <
 				&kp LS(GRAVE) &trans &trans &kp LBRC &kp RBRC &trans  &trans    &trans    &trans      &trans       &trans       &trans
 				&trans        &trans &trans &kp LPAR &kp RPAR &trans  &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT    &trans       &trans
