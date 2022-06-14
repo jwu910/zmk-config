@@ -54,29 +54,29 @@
 		raise {
 				// -----------------------------------------------------------------------------------------
 				// | LS(GRAVE) |    |    |  {   |  }   |     |      |       |       |          |        |      |
-				// |           |    |    |  (   |  )   |     | LEFT | DOWN  | UP    |  RIGHT   |        |      |
+				// |           |    |    |  (   |  )   |     |      |       |       |          |        |      |
 				// |           |    |    |  [   |  ]   |     |      |       | PREV  |  Next    |        |      |
 				// |           |    |    |      |      | TAB |      |       |       | VOL_DOWN | VOL_UP | PLAY |
 			bindings = <
 				&kp LS(GRAVE) &trans &trans &kp LBRC &kp RBRC &trans  &trans    &trans    &trans      &trans       &trans       &trans
-				&trans        &trans &trans &kp LPAR &kp RPAR &trans  &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT    &trans       &trans
+				&trans        &trans &trans &kp LPAR &kp RPAR &trans  &trans    &trans    &trans      &trans       &trans       &trans
 				&trans        &trans &trans &kp LBKT &kp RBKT &trans  &trans    &trans    &kp C_PREV  &kp C_NEXT   &trans       &trans
-				&trans        &trans &trans &trans   &mo 3    &kp TAB &trans    &trans    &trans      &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
+				&trans        &trans &trans &trans   &tran    &kp TAB &trans    &trans    &trans      &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
 			>;
 		};
 
 		control {
 			bindings = <
-				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+				&trans &trans &trans &trans     &trans      &trans &trans &trans &trans &trans &trans &trans
+				&trans &trans &trans &trans     &trans      &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans &trans &kp K_COPY &kp K_PASTE &trans &trans &trans &trans &trans &trans &trans
-				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &mo 4
+				&trans &trans &trans &trans     &trans      &trans &trans &trans &trans &trans &trans &mo 4
 			>;
 		};
 
 		SOME_THING {
 			bindings = <
-				&bootloader &reset  &trans  &trans  &trans   &trans  &trans  &kp N6    &kp N8    &kp N9    &trans
+				&bootloader &reset  &trans  &trans   &trans  &trans  &trans  &kp N6    &kp N8    &kp N9    &trans
 				&trans      &trans  &trans  &trans   &trans  &trans  &trans  &kp N4    &kp N5    &kp N6    &trans
 				&trans      &trans  &trans  &trans   &trans  &trans  &trans  &kp N1    &kp N2    &kp N3    &trans
 				&trans      &trans  &trans  &trans   &trans  &trans  &trans  &trans    &kp N0    &trans    &trans
@@ -90,10 +90,10 @@
 				// |      |      |      |      |      |      |      |      |      |       |       |       |
 				// |      |      |      |      |      |      |      |      |      |       |       |       |
 			bindings = <
-				&trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
-				&trans &trans &trans &trans &trans &trans &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &trans &kp F12
-				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &trans
-				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &trans
+				&trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
+				&trans &trans &trans &trans &trans &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &kp F12
+				&trans &trans &trans &trans &trans &trans &trans   &trans   &trans &trans    &trans  &trans
+				&trans &trans &trans &trans &trans &trans &trans   &trans   &trans &trans    &trans  &trans
 			>;
 		};
 	};
